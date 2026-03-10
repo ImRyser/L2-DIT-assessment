@@ -5,7 +5,12 @@ def quit():
 
 def print_names():
     name_count = 0
-    Label(main_window, font='bold', text="Row").grid(column=0)
+    Label(main_window, font='bold', text="Row").grid(column=0,row=6)
+    Label(main_window, font='bold', text="Full Name").grid(column=1,row=6)
+    Label(main_window, font='bold', text="Item needed").grid(column=2,row=6)
+    Label(main_window, font='bold', text="Amount of needed item")
+    Label(main_window, font='bold', text="Date of hire").grid(column=3, row=6)
+    Label(main_window, fon='bold', text="Date of retrn").grid(column=4,row=6)
 
 
 
