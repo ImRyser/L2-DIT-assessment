@@ -3,19 +3,22 @@ from tkinter import *
 def quit():
     main_window.destroy()
 
+def print_names():
+    name_count = 0
+    Label(main_window, font='bold', text="Row").grid(column=0)
+
+
+
+
+
 def entry_print():
-    print(entry_first_name.get())
-    print(entry_last_name.get())
+    Label(main_window, text= entry_first_name.get()) .grid(column=0,row=3, sticky=E)
+    Label(main_window, text= entry_last_name.get()) .grid(column=1,row=3,sticky=E)
 
 def main():
-    Button(main_window, text="Quit", command=quit) .grid()
-    Button(main_window, text="Print", command=entry_print) .grid
+    Button(main_window, text="Quit",command=quit) .grid(column=0,row=0)
+    Button(main_window, text="Print", command = entry_print) .grid(column=1, row=3, sticky=W)
+    Label(main_window, text="First Name") .grid(column=0,row=1)
 
-main_window = Tk()
-entry_first_name = Entry(main_window)
-entry_first_name.grid()
-
-entry_last_name = Entry(main_window)
-entry_last_name.grid()
-
+main_window =Tk()
 main()
